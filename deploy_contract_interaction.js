@@ -18,8 +18,6 @@ async function main() {
   const contract = await contractFactory.deploy();
   await contract.deployTransaction.wait(1);
 
-  // Interactuando con el contrato y obtengo el numero favorito
-
   const currentFavoriteNumber = await contract.retrieve();
   console.log(
     `Current Favorite Number is: ${currentFavoriteNumber.toString()}`

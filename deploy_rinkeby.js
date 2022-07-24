@@ -2,7 +2,6 @@ const ethers = require("ethers");
 const fs = require("fs-extra");
 
 async function main() {
-    // puede ser con enviromental variables
     const RPC_URL =
         "https://eth-rinkeby.alchemyapi.io/v2/IZVmweRhRkLzN9U7F9oyoWkZxPZvGaM9";
     const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
