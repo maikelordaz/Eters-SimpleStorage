@@ -1,6 +1,7 @@
 # ETHERS DEPLOYS
 
-This is a solidity to demonstrate the usage of ethers and Ganache to deploy:
+This is a solidity to demonstrate the usage of ethers and Ganache to deploy,
+there are mor than one deploy contract to show different features
 
 ## :rocket: INSTALLATION
 

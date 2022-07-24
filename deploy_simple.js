@@ -7,8 +7,7 @@ async function main() {
     const provider = new ethers.providers.JsonRpcProvider(
         "http://127.0.0.1:7545"
     );
-    const privateKey =
-        "4d0f5e6d6e59049b78c6262182b13a45d9296064ba74373a6a00d1534a723a86";
+    const privateKey = process.env.PRIVATE_KEY;
     const wallet = new ethers.Wallet(privateKey, provider);
     const abi = fs.readFileSync(
         "./SimpleStorage_sol_SimpleStorage.abi",

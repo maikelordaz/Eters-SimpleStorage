@@ -2,11 +2,9 @@ const ethers = require("ethers");
 const fs = require("fs-extra");
 
 async function main() {
-    const RPC_URL =
-        "https://eth-rinkeby.alchemyapi.io/v2/IZVmweRhRkLzN9U7F9oyoWkZxPZvGaM9";
+    const RPC_URL = process.env.RPC_URL;
     const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
-    const privateKey =
-        "aa770c456b00f6d385be32742457aa73b8c9119eea3c5270826892a2baa749e1";
+    const privateKey = process.env.PRIVATE_KEY;
     const wallet = new ethers.Wallet(privateKey, provider);
     const abi = fs.readFileSync(
         "./SimpleStorage_sol_SimpleStorage.abi",
